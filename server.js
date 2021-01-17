@@ -16,7 +16,8 @@ function random(arr, count) {
 }
 
 function verify(a, b) {
-  return a.toLowerCase() === b.toLowerCase();
+  const sanitize = (v) => v.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return sanitize(a) === sanitize(b);
 }
 
 app.get("/", (_, res) => {

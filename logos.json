@@ -78,7 +78,7 @@
   { "name": "Mithril", "id": "mithril" },
   { "name": "Mocha", "id": "mocha" },
   { "name": "Mongodb", "id": "mongodb" },
-  { "name": "Nextjs", "id": "nextjs" },
+  { "name": "Next.js", "id": "nextjs" },
   { "name": "Nginx", "id": "nginx" },
   { "name": "Nodejs", "id": "nodejs-icon" },
   { "name": "Nodemon", "id": "nodemon" },
