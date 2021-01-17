@@ -1,0 +1,26 @@
+{
+  "name": "guess-the-logo",
+  "version": "1.0.0",
+  "description": "Logo quiz game",
+  "type": "module",
+  "engines": {
+    "node": ">= 12.19"
+  },
+  "scripts": {
+    "start": "node --experimental-modules --experimental-json-modules server.js",
+    "watch": "nodemon --experimental-modules --experimental-json-modules server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint '**/*.js'"
+  },
+  "author": "Paul Ntawuruhunga",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7"
+  }
+}
