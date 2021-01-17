@@ -54,7 +54,6 @@
         for (let pair of formData.entries()) {
           data[pair[0]] = pair[1];
         }
-
         const response = await fetch("/validate", {
           method: "POST",
           headers: {
