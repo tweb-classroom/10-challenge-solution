@@ -4,6 +4,8 @@
 
 Ceci est un exercice pratique dans lequel vous allez créer un jeu de quiz avec JavaScript, HTML CSS et Node.js. Le joueur devra deviner le nom de la technologie web qui se cache derrière chaque logo. Pour corser la partie, les logos ne seront que partiellement visible.
 
+![Example](./example.gif)
+
 ### Démarrage
 
 Commencez par exécuter la commande suivante pour installer les dépendances du projet :
