@@ -65,7 +65,7 @@
 
         const { logos, score } = response;
         submitBtn.style.display = "none";
-        scoreEl.innerHTML = `${score} / ${logos.length} correct answers`;
+        scoreEl.innerHTML = `${score} / ${logos.length} valid answers`;
         logos.forEach((logo) => {
           const input = document.querySelector(`[name="${logo.id}"]`);
           input.value = logo.name;
