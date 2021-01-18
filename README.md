@@ -26,7 +26,7 @@ Vous pouvez également démarrer l'application avec `npm run watch`. Cette comma
 
 Pour réussir ce challenge, on vous demande d'apporter les modifications nécessaires au projet de base qui vous est fournis, afin de remplir le cahier des charges suivant :
 
-1. Au démarrage, la page affiche 8 logos choisis aléatoirement parmis les 124 logos disponible dans le fichier `logo.json` (2pt)
+1. La page d'accueil affiche 8 logos choisis aléatoirement parmis les 124 logos disponible dans le fichier `logo.json` (2pt)
 2. Le joueur peut entrer une réponse en dessous de chaque logo à l'aide d'un champ texte. Lorsque le joueur clique sur le bouton "Check results", ses réponses sont envoyées au serveur par une requête POST à l'endpoint `/validate`. (4pt)
 3. À l'endpoint `/validate`, le serveur compare les valeurs reçues avec les noms des logos puis retourne une réponse au format JSON contenant le score du joueur (nombre de réponses corrects) ainsi que les solutions du quiz (l'identifiant des logos avec leurs noms). (4pt)
 4. Lors de la vérification des valeurs reçues, la casse et les caractères spéciaux sont ignorés. Par exemple, les valeurs `nextjs` et `Next.js` sont considérées comme étant équivalentes. Écrivez un test unitaire pour valider ce comportement. (3pt)
