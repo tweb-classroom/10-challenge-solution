@@ -49,18 +49,31 @@ Répondez aux questions suivantes en modifiant directement le fichier [README.md
 
 **1. Expliquez la différence entre une MPA (Multi-Page Application) et une SPA (Single Page Application). Justifiez le choix d’une architecture pour un blog (2pt)**
 
-Reponse:
+Reponse minimal:
+- Avec une MPA, les pages sont construite côté serveur
+- Avec une SPA, les pages sont construite côté client avec Javascript
+- Pour le cas d'un blog, il est plus approprié d'utilser une MPA par soucis de SEO.
+
 
 **2. Vous êtes responsable de la partie client d'un site web et vous souhaitez utiliser une syntaxe Javascript moderne : ES Modules et Optional Chaining. Décrivez 2 outils que vous devrez mettre en place pour que le site soit compatible avec tous les navigateurs.(2pt)**
 
-Reponse:
-
+Reponse minimal:
+- Babel: pour transfer la syntax Optional Chaining
+- Webpack: Pour concatener les modules dans un fichier JS.
 
 **3. Expliquez ce qu'est le Virtual DOM et comment ce concept a changé la manière de créer des applications interactives. Nommez deux frameworks qui se basent sur ce concept. (2pt)**
 
-Reponse:
+Reponse minimal:
+- Le virtual DOM c'est la représentation du DOM en mémoire
+- Ce concept permet d'utiliser un fonction de rendu écrite de manière déclarative. Celle-ci sera appelé automatiquement lorsque le state de l'application change afin de mettre à jour l'interface.
+- Examples: React, Vue
 
 
 **4. Décrivez le mode opératoire d’une attaque de type CSRF. Décrivez une mesure pour vous protéger contre ce type d’attaque. (2pt)**
 
 Reponse:
+- L'attaquant dirige l'utilisateur sur un site malveillant
+- Le site malveillant envoi une requête sur le site cible
+- Si des cookies associés au site cible existent, ils seront envoyé automatiquement, permettant ainsi au site malveillant d'exécuter une action à l'insu de l'utilisateur 
+
+Mesure préventive: mettre en place des CSRF Token
