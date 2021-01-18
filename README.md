@@ -48,15 +48,19 @@ Vous êtes libre d'utiliser n'importe qu'elle technologie Open Source et d'adapt
 Répondez aux questions suivantes en modifiant directement le fichier [README.md](./README.md)
 
 **1. Expliquez la différence entre une MPA (Multi-Page Application) et une SPA (Single Page Application). Justifiez le choix d’une architecture pour un blog (2pt)**
+
 Reponse:
 
 **2. Vous êtes responsable de la partie client d'un site web et vous souhaitez utiliser une syntaxe Javascript moderne : ES Modules et Optional Chaining. Décrivez 2 outils que vous devrez mettre en place pour que le site soit compatible avec tous les navigateurs.(2pt)**
+
 Reponse:
 
 
 **3. Expliquez ce qu'est le Virtual DOM et comment ce concept a changé la manière de créer des applications interactives. Nommez deux frameworks qui se basent sur ce concept. (2pt)**
+
 Reponse:
 
 
 **4. Décrivez le mode opératoire d’une attaque de type CSRF. Décrivez une mesure pour vous protéger contre ce type d’attaque. (2pt)**
+
 Reponse:
