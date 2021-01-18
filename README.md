@@ -1,7 +1,5 @@
 # TWEB Challenge
 
-## Partie 1 : Tech Logo Quiz
-
 Ceci est un exercice pratique dans lequel vous allez créer un jeu de quiz avec JavaScript, HTML CSS et Node.js. Le joueur devra deviner le nom de la technologie web qui se cache derrière chaque logo. Pour corser la partie, les logos ne seront que partiellement visible.
 
 ![Example](./example.gif)
@@ -34,13 +32,3 @@ Pour réussir ce challenge, on vous demande d'apporter les modifications nécess
    - afficher le score du joueur (1pt)
    - afficher la solution en dessous de chaque logo (2pt)
 
-## Partie 2 : Connaissances générales
-
-Répondez aux questions suivantes en ajoutant vos réponses directement au README.md
-
-1. ... (1pt)
-2. ... (1pt)
-3. ... (1pt)
-4. ... (1pt)
-5. ... (1pt)
-  
