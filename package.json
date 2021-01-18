@@ -1,7 +1,7 @@
 {
-  "name": "guess-the-logo",
+  "name": "logo-quiz",
   "version": "1.0.0",
-  "description": "Logo quiz game",
+  "description": "Tech Logo quiz game",
   "type": "module",
   "engines": {
     "node": ">= 12.19"
@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node --experimental-modules --experimental-json-modules server.js",
     "watch": "nodemon --experimental-modules --experimental-json-modules server.js -e js,ejs",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --experimental-modules --experimental-json-modules",
     "lint": "eslint '**/*.js'"
   },
   "author": "Paul Ntawuruhunga",
@@ -19,7 +19,9 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^7.18.0",
+    "mocha": "^8.2.1",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.7"
   }

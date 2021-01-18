@@ -22,6 +22,12 @@ L'application est maintenant en cours d'exécution sur http://localhost:3000.
 
 Vous pouvez également démarrer l'application avec `npm run watch`. Cette commande permet de relancer le serveur dès qu'un fichier est modifié.
 
+Les tests peuvent être lancés avec la commande:
+```
+npm run test
+```
+
+
 ### Cahier des charges
 
 Pour réussir ce challenge, on vous demande d'apporter les modifications nécessaires au projet de base qui vous est fournis, afin de remplir le cahier des charges suivant :
