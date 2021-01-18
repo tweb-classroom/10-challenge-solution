@@ -1,7 +1,7 @@
 {
   "name": "logo-quiz",
   "version": "1.0.0",
-  "description": "Tech Logo quiz game",
+  "description": "Logo quiz game about web technologies",
   "type": "module",
   "engines": {
     "node": ">= 12.19"
