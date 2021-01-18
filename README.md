@@ -40,6 +40,7 @@ Pour réussir ce challenge, on vous demande d'apporter les modifications nécess
    - afficher le score du joueur (1pt)
    - afficher la solution en dessous de chaque logo (2pt)
 
+Vous êtes libre d'utiliser n'importe qu'elle technologie Open Source et d'adapter la structure du projet comme bon vous semble.
 
 ## Partie 2 : Connaissances générales
 
