@@ -26,6 +26,7 @@ Exemple:
 
 
 **J'ai un erreur lorsque j'essaye d'importer un module**
+
 Lorsque le flag `--experimental-modules` est utilisé, ce qui est le cas dans ce projet, il devient nécessaire de specifier l'extension.
 
 ```js
