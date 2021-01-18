@@ -1,6 +1,6 @@
 # Questions fréquents
 
-**Qu'est ce que EJS ?**
+### Qu'est ce que EJS ?
 
 EJS est un moteur de template très simple qui peut être utilisé avec ExpressJS.
 
@@ -25,7 +25,7 @@ Exemple:
 ```
 
 
-**J'ai un erreur lorsque j'essaye d'importer un module**
+### J'ai un erreur lorsque j'essaye d'importer un module
 
 Lorsque le flag `--experimental-modules` est utilisé, ce qui est le cas dans ce projet, il devient nécessaire de specifier l'extension.
 
