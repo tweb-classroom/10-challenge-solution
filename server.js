@@ -1,6 +1,5 @@
 import express from "express";
 import logger from "morgan";
-import logos from "./logos.json";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -11,32 +10,14 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.static("public"));
 
-function random(arr, count) {
-  return arr.sort(() => Math.random() - Math.random()).slice(0, count);
-}
-
-function verify(a, b) {
-  const sanitize = (v) => v.toLowerCase().replace(/[^a-z0-9]/g, "");
-  return sanitize(a) === sanitize(b);
-}
-
 app.get("/", (_, res) => {
-  res.render("game", { logos: random(logos, 8) });
-});
-
-app.post("/validate", (req, res) => {
-  const items = Object.entries(req.body).map(([id, answer]) => {
-    const logo = logos.find((logo) => logo.id === id);
-    return {
-      id: logo.id,
-      name: logo.name,
-      valid: verify(answer, logo.name),
-    };
-  });
-
-  res.json({
-    logos: items,
-    score: items.filter((item) => item.valid).length,
+  res.render("game", {
+    logos: [
+      { name: "React", id: "react" },
+      { name: "Svelte", id: "svelte-icon" },
+      { name: "Vue", id: "vue" },
+      { name: "Angular", id: "angular-icon" },
+    ],
   });
 });
 

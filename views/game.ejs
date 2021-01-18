@@ -10,71 +10,15 @@
     <title>Tech Logo challenge</title>
   </head>
   <body class="bg-gray-100 text-gray-800 p-4">
+
     <div class="max-w-screen-lg mx-auto">
-      <div class="text-center mb-8">
-        <h1 class="text-4xl font-bold mb-2">Guess the logos</h1>
-        <div class="text-2xl text-gray-500" id="score"></div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <% logos.forEach(function(logo) { %>
+        <img class="w-full" src="logos/<%= logo.id %>.svg" />
+        <% }) %>
       </div>
-
-      <form id="form">
-        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-          <% logos.forEach(function(logo) { %>
-          <div>
-            <img class="w-full border" src="logos/<%= logo.id %>.svg" />
-            <input
-              class="bg-white text-center font-semibold w-full text-lg border p-2 mt-1"
-              name="<%= logo.id %>"
-              type="text"
-              placeholder="Type here..."
-            />
-          </div>
-          <% }) %>
-        </div>
-
-        <div class="flex justify-center mt-8">
-          <button
-            type="submit"
-            class="bg-blue-500 text-lg font-medium p-4 text-white uppercase"
-          >
-            Check results 🤞
-          </button>
-        </div>
-      </form>
     </div>
-    <script>
-      const formEl = document.getElementById("form");
-      const scoreEl = document.getElementById("score");
-      const submitBtn = formEl.querySelector('[type="submit"]');
 
-      formEl.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        const data = {};
-        const formData = new FormData(formEl);
-        for (let pair of formData.entries()) {
-          data[pair[0]] = pair[1];
-        }
-        const response = await fetch("/validate", {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }).then((res) => res.json());
-
-        const { logos, score } = response;
-        submitBtn.style.display = "none";
-        scoreEl.innerHTML = `${score} / ${logos.length} valid answers`;
-        logos.forEach((logo) => {
-          const input = document.querySelector(`[name="${logo.id}"]`);
-          input.value = logo.name;
-          input.disabled = true;
-          const classes = logo.valid
-            ? ["bg-green-50", "text-green-500"]
-            : ["bg-red-50", "text-red-500"];
-          input.classList.add(...classes);
-        });
-      });
-    </script>
+    </div>
   </body>
 </html>
