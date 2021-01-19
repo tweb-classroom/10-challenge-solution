@@ -11,12 +11,12 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.static("public"));
 
-// TODO question 1: Retourner 8 logo choisis aléatoirement
+// TODO (question 1) Retourner 8 logo choisis aléatoirement
 app.get("/", (_, res) => {
   res.render("game", { logos: randomArray(logos, 8) });
 });
 
-// TODO: question 3: ajouter un endpoint pour valider les réponses du joueur
+// TODO (question 3) Ajouter un endpoint pour valider les réponses du joueur
 // puis retourner le nombre de réponses corrects et les solutions
 app.post("/validate", (req, res) => {
   const items = Object.entries(req.body).map(([id, answer]) => {

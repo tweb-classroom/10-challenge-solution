@@ -1,22 +1,22 @@
-# Questions fréquents
+# Questions fréquentes
 
-### Qu'est ce que EJS ?
+### Qu'est-ce que EJS ?
 
-EJS est un moteur de template très simple qui peut être utilisé avec ExpressJS.
+[EJS](https://ejs.co/) est un moteur de template très simple qui peut être utilisé avec [Express.js](https://expressjs.com/fr/) pour générer des pages HTML.
 
-Par exemple, ici on va rendre le template `views/example.ejs` en lui passant une variable `user`
+Par exemple, ici on va rendre le template `views/example.ejs` en passant une variable `user`
 
 ```js
 app.get("/", (req, res) => {
-  res.render("example", { user: { name: "paulnta" } });
+  res.render("example", { user: { name: "paulnta" } });
 });
 ```
 
-Puis dans le fichier de template vous pourrez utiliser la syntaxe:
-- `<% %>` pour controler le flux (conditions, boucles, etc.)
-- `<%= %>` pour inclure le contenu d'une variable dans la page 
+Puis dans le fichier de template on peut utiliser la syntaxe :
+- `<% %>` pour contrôler le flux (conditions, boucles, etc.)
+- `<%= %>` pour inclure le contenu d'une variable dans la page 
 
-Exemple:
+Exemple :
 ```html
 <!-- views/example.ejs -->
 <% if (user) { %>
@@ -25,9 +25,9 @@ Exemple:
 ```
 
 
-### J'ai un erreur lorsque j'essaye d'importer un module
+### J'ai une erreur lorsque j'essaye d'importer un module
 
-Lorsque le flag `--experimental-modules` est utilisé, ce qui est le cas dans ce projet, il devient nécessaire de specifier l'extension.
+Lorsque le flag `--experimental-modules` est utilisé, ce qui est le cas dans ce projet, l'extension est obligatoire dans les imports.
 
 ```js
 // Don't
