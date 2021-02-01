@@ -49,18 +49,42 @@ Répondez aux questions suivantes en modifiant directement le fichier [README.md
 
 **1. Expliquez la différence entre une MPA (Multi-Page Application) et une SPA (Single Page Application). Justifiez le choix d’une architecture pour un blog (2pt)**
 
-Réponse :
+Une Multi-page Application construit les pages du côté serveur et un rechargement de la page est nécessaire pour chaque navigation.
+
+Une Single Page Application gère la construction des pages et la navigation côté client.
+
+Pour un Blog, l'architecture la plus appropriée serait une MPA pour les raisons suivantes:
+- 🔥 SEO: Les robots auront plus de facilité à indexer le contenu des pages sans attendre que le JS s'exécute (ou bug dans certains cas).
+- 🚀 Performance: La quantité de scripts à télécharger et à exécuter sera moindre (améliore également le [SEO](https://developers.google.com/search/blog/2020/11/timing-for-page-experience)).
+- 💵 Coût de développement: Les MPA sont généralement beaucoup plus simple à développer. Pas besoin de réimplémenter les fonctionnalités de base des navigateurs (ex. L'envoi de formulaire, la gestion de l'historique du navigateur, etc.), puis pas besoin de créer d'API.
+
+Remarques concernant la correction:
+- ❌ Le fait d'avoir beaucoup de pages, des layout différent ou encore une grande quantité de donnée ne sont pas des critères pour le choix d'une de ses architectures.
+- ✅ Utiliser l'architecture SPA pour améliorer l'expérience utilisateur est justifiable. On peut par exemple améliorer les performances ressenties lors de la navigation entre les pages. Mais attention au coût de développement plus important (ex. un joli blog mal référencer c'est dommage, donc ajouter du Server Side Rendering serait une sage décision).
+
+Informations complémentaire:
+Pour un blog, le meilleur des deux mondes est de générer des pages `.html` statiques pour chaque article. Ainsi, on assure le SEO et diminue le temps de latence pour naviguer de pages en pages. Un outil populaire est https://www.gatsbyjs.com/
 
 **2. Vous êtes responsable de la partie client d'un site web et vous souhaitez utiliser une syntaxe Javascript moderne : ES Modules et Optional Chaining. Décrivez 2 outils que vous devrez mettre en place pour que le site soit compatible avec tous les navigateurs.(2pt)**
 
-Réponse :
-
+- Certains navigateurs ne supportent pas les modules ES6. Il faut donc utiliser un module *bundler* tel que Webapack ou Browserify pour rassembler les modules dans un seul fichier.
+- La syntaxe Optional Chaining n'est pas encore comprise par beaucoup de navigateurs. Il faut donc utiliser un transpilateur tel que Babel pour transformer cette syntaxe moderne en Javascript ES5 (supporté partout)
 
 **3. Expliquez ce qu'est le Virtual DOM et comment ce concept a changé la manière de créer des applications interactives. Nommez deux frameworks qui se basent sur ce concept. (2pt)**
 
-Réponse :
+Le Virtual DOM est une représentation en mémoire (un simple objet Javascript) du DOM. 
+
+Ce concept est utilisé par des frameworks tels que React ou Vue et permet le rendu déclaratif: Le développeur s'occupe de modifier le *state* de son application et le framework se charge de mettre à jour le DOM de manière efficace.
 
 
 **4. Décrivez le mode opératoire d’une attaque de type CSRF. Décrivez une mesure pour vous protéger contre ce type d’attaque. (2pt)**
 
-Réponse :
+L'attaquant exécute des actions malveillantes (par le biais d'une requête HTTP) en profitant des droits d'un utilisateur (par exemple les informations d'authentification présentent dans les cookies).
+
+La faille apparaît lorsque le serveur ne vérifie pas la provenance d'une requête pour distinguer celles émises par un site connu ou malveillant. 
+
+Quelques solutions:
+- Utiliser l'option `SameSite` pour les cookies garanti qu'ils sont envoyés uniquement au sein du même domaine.
+- Ajouter des entêtes CORS garanti que les requêtes HTTP sont envoyées uniquement depuis un domaine connu.
+- Utiliser des CSRF Tokens garantie que les requêtes proviennent d'une page générée par le serveur courant.
+
