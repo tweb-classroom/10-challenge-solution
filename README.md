@@ -59,32 +59,32 @@ Pour un Blog, l'architecture la plus appropriée serait une MPA pour les raisons
 - 💵 Coût de développement: Les MPA sont généralement beaucoup plus simple à développer. Pas besoin de réimplémenter les fonctionnalités de base des navigateurs (ex. L'envoi de formulaire, la gestion de l'historique du navigateur, etc.), puis pas besoin de créer d'API.
 
 Remarques concernant la correction:
-- ❌ Le fait d'avoir beaucoup de pages, des layout différent ou encore une grande quantité de donnée ne sont pas des critères pour le choix d'une de ses architectures.
-- ✅ Utiliser l'architecture SPA pour améliorer l'expérience utilisateur est justifiable. On peut par exemple améliorer les performances ressenties lors de la navigation entre les pages. Mais attention au coût de développement plus important (ex. un joli blog mal référencer c'est dommage, donc ajouter du Server Side Rendering serait une sage décision).
+- ❌ Le fait d'avoir beaucoup de pages, des layouts différents ou encore une grande quantité de données ne sont pas des critères pour le choix d'une de ces architectures.
+- ✅ Utiliser l'architecture SPA pour améliorer l'expérience utilisateur est justifiable. On peut par exemple améliorer les performances ressenties lors de la navigation entre les pages. Mais attention au coût de développement plus important (ex. un joli blog mal référencé c'est dommage, donc ajouter du Server Side Rendering serait une sage décision).
 
 Informations complémentaire:
 Pour un blog, le meilleur des deux mondes est de générer des pages `.html` statiques pour chaque article. Ainsi, on assure le SEO et diminue le temps de latence pour naviguer de pages en pages. Un outil populaire est https://www.gatsbyjs.com/
 
 **2. Vous êtes responsable de la partie client d'un site web et vous souhaitez utiliser une syntaxe Javascript moderne : ES Modules et Optional Chaining. Décrivez 2 outils que vous devrez mettre en place pour que le site soit compatible avec tous les navigateurs.(2pt)**
 
-- Certains navigateurs ne supportent pas les modules ES6. Il faut donc utiliser un module *bundler* tel que Webapack ou Browserify pour rassembler les modules dans un seul fichier.
-- La syntaxe Optional Chaining n'est pas encore comprise par beaucoup de navigateurs. Il faut donc utiliser un transpilateur tel que Babel pour transformer cette syntaxe moderne en Javascript ES5 (supporté partout)
+- Certains navigateurs ne supportent pas les modules ES6. Il faut donc utiliser un module *bundler* tel que Webpack ou Browserify pour rassembler les modules dans un seul fichier.
+- La syntaxe Optional Chaining n'est pas encore comprise par beaucoup de navigateurs. Il faut donc utiliser un transpilateur tel que Babel pour transformer cette syntaxe moderne en JavaScript ES5 (supporté partout).
 
 **3. Expliquez ce qu'est le Virtual DOM et comment ce concept a changé la manière de créer des applications interactives. Nommez deux frameworks qui se basent sur ce concept. (2pt)**
 
-Le Virtual DOM est une représentation en mémoire (un simple objet Javascript) du DOM. 
+Le Virtual DOM est une représentation en mémoire (un arbre d'objets JavaScript) du DOM. 
 
-Ce concept est utilisé par des frameworks tels que React ou Vue et permet le rendu déclaratif: Le développeur s'occupe de modifier le *state* de son application et le framework se charge de mettre à jour le DOM de manière efficace.
+Ce concept est utilisé par des frameworks tels que React ou Vue et permet le rendu déclaratif: Le développeur s'occupe de modifier l'état (state) de son application et le framework se charge de mettre à jour le DOM de manière efficace.
 
 
 **4. Décrivez le mode opératoire d’une attaque de type CSRF. Décrivez une mesure pour vous protéger contre ce type d’attaque. (2pt)**
 
-L'attaquant exécute des actions malveillantes (par le biais d'une requête HTTP) en profitant des droits d'un utilisateur (par exemple les informations d'authentification présentent dans les cookies).
+L'attaquant exécute des actions malveillantes en forgeant une requête HTTP qui sera exécutée par le navigateur de l'utilisateur. Ainsi, il profite indirectement des droits de l'utilisateur (ex. informations d'authentification présentent dans les cookies). 
 
 La faille apparaît lorsque le serveur ne vérifie pas la provenance d'une requête pour distinguer celles émises par un site connu ou malveillant. 
 
-Quelques solutions:
-- Utiliser l'option `SameSite` pour les cookies garanti qu'ils sont envoyés uniquement au sein du même domaine.
+Mesures:
+- Utiliser l'option `SameSite` garanti que les cookies sont envoyés uniquement au sein du même domaine.
 - Ajouter des entêtes CORS garanti que les requêtes HTTP sont envoyées uniquement depuis un domaine connu.
-- Utiliser des CSRF Tokens garantie que les requêtes proviennent d'une page générée par le serveur courant.
+- Utiliser des CSRF Tokens garanti que les requêtes proviennent d'une page générée par le serveur courant.
 
